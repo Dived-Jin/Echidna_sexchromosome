@@ -4,7 +4,7 @@ This pipline is used to calculate the X/Y identity and divergence calculation of
 ## X/Y identity
 Calculate_XY_identity.sh    
 Usage: sh Calculate_XY_identity.sh X.fasta & Y.fasta <abs_dir> X.assign.bed Y.assign.bed PAR.assign.bed XY.gff strata.bed  
-X.fasta & Y.fasta: X/Y sequences file with format.  
+X.fasta & Y.fasta: X/Y sequences file with fasta format.  
 <abs_dir>: Output path.  
 X.assign.bed Y.assign.bed PAR.assign.bed: Sex-link scaffold region with three columns (chrid,start,end).  
 XY.gff: The gene annotation file of XY with gff format.  
