@@ -1,4 +1,4 @@
-# Monotremata_sexChromosome
+# Echidna_sexchromosome
 Echidna &amp; platypus
 this pipline include three part 
 
