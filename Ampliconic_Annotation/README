@@ -1,7 +1,7 @@
-#Ampliconic Annotation
+# Ampliconic Annotation
 This pipeline is used to ampliconic region annotation in echidna sex chromosome analysis. Include followed scripts:
 
-##Anntotation
+## Anntotation
 AmpliconRegion.sh  
 Usage: sh AmpliconRegion.sh -f X.fasta -b X.bed -o <abs_path> -p Echidna -fq1 NG_1.fq.gz -fq2 NG_2.fq.gz -d 18  
   X.fasta: X sequences whiout PAR region with fasta format.  
