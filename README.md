@@ -5,7 +5,7 @@ This repository include three piplines used in echidna genome study, mainly abou
 
 ## X/Y identity & strata divergence calculation
 
-This pipline (in [XY_identity]()) include two steps:  
+This pipline (in [XY_identity](https://github.com/Dived-Jin/Echidna_sexchromosome/tree/main/XY_identity)) include two steps:  
 1. Calculate X/Y identity based on lastZ MAF and NET results.  
 2. Calculate strata divergence by baseml with MAF.  
 
