@@ -6,7 +6,7 @@ AmpliconRegion.sh
 Usage: `sh AmpliconRegion.sh -f X.fasta -b X.bed -o <abs_outpath> -p Echidna -fq1 NG_1.fq.gz -fq2 NG_2.fq.gz -d 18`  
   `-f`: nonPARX or nonPARY sequences in FASTA format.  
   `-b`: nonPARX/Y region in BED format  
-  `-p`: output prefix
+  `-p`: output prefix  
   `-fq1` & `-fq2`: path to NGS data   
   `-d`: whole genome sequencing depth
 
@@ -23,7 +23,7 @@ Usage: `sh MCLcluster.sh all.pep.fasta gene.annotation`
 AmpliconStats.sh  
 Usage: `sh AmpliconStats.sh Ags.txt PlatySex.assign EchidnaSex.assign Mcl.txt Echidna_vs_chicken.aln Platypus_vs_chicken.aln Platypus.Sexgene.list Echidna.Sexgene.list  Chicken.gene.list`  
   `Ags.txt`: Ampliconic genes list in one column (Gene_id).  
-  `PlatySex.assign` &  `EchidnaSex.assign`: The XY nonPAR region file including four columns (scaffold_id, start, end, sex chromosome id). For example:
+  `PlatySex.assign` & `EchidnaSex.assign`: The XY nonPAR region file including four columns (scaffold_id, start, end, sex chromosome id). For example:
   ```
     chrX1	0	100000	chrX1  
     SUPER_Y1 0	100000	chrY1  
