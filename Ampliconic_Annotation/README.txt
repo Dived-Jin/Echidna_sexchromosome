@@ -3,7 +3,7 @@ This pipeline is used to ampliconic region annotation in echidna sex chromosome 
 
 ##Anntotation
 AmpliconRegion.sh  
-Usege: sh AmpliconRegion.sh -f X.fasta -b X.bed -o <abs_path> -p Echidna -fq1 NG_1.fq.gz -fq2 NG_2.fq.gz -d 18  
+Usage: sh AmpliconRegion.sh -f X.fasta -b X.bed -o <abs_path> -p Echidna -fq1 NG_1.fq.gz -fq2 NG_2.fq.gz -d 18  
   X.fasta: X sequences whiout PAR region with fasta format.  
   X.bed: NonPAR X region includes three columns (scaffold_id, start, end)  
   Echidna: out file prefix.   
@@ -12,13 +12,13 @@ Usege: sh AmpliconRegion.sh -f X.fasta -b X.bed -o <abs_path> -p Echidna -fq1 NG
 
 ##Orthologs cluster
 MCLcluster.sh  
-Usege: sh 2.MCLcluster.sh all.pep.fasta gene.annotation  
+Usage: sh 2.MCLcluster.sh all.pep.fasta gene.annotation  
   all.pep.fasta: all protein sequences.  
   gene.annotation:  gene function file with two colums (Gene_id,Gene_name).
 
 ##Ampliconic family classification
 AmpliconStats.sh  
-Usege: sh 3.AmpliconStats.sh Ags.txt PlatySex.assign EchidnaSex.assign Mcl.txt Echidna_vs_chicken.aln Platypus_vs_chicken.aln Platypus.function.annotation  Echidna.function.annotation Chicken.function.annotation  
+Usage: sh 3.AmpliconStats.sh Ags.txt PlatySex.assign EchidnaSex.assign Mcl.txt Echidna_vs_chicken.aln Platypus_vs_chicken.aln Platypus.function.annotation  Echidna.function.annotation Chicken.function.annotation  
   Ags.txt: Amplicon gens list  
   PlatySex.assign &  EchidnaSex.assign :  the XY nonPAR region included four columns (scaffold_id, start, end, sex chromosome id) such as:  
     chrX1	0	100000	chrX1  
@@ -29,7 +29,7 @@ Usege: sh 3.AmpliconStats.sh Ags.txt PlatySex.assign EchidnaSex.assign Mcl.txt E
 
 ##Circos paint
 Align_paint.sh
-Usege: sh 4.Align_paint.sh Echidna.X.fasta Platypus.X.fasta Echidna.X.AGs Platypus.X.AGs Mcl.class.file  Echidna.X.assign Platypus.X.assign 
+Usage: sh 4.Align_paint.sh Echidna.X.fasta Platypus.X.fasta Echidna.X.AGs Platypus.X.AGs Mcl.class.file  Echidna.X.assign Platypus.X.assign 
   Echidna.X.fasta & Platypus.X.fasta: X fasta inclued	PAR region.
   Echidna.X.AGs & Platypus.X.AGs: Amplicons gene list.
   Mcl.class.file: Ampliconic genes classfication result.
