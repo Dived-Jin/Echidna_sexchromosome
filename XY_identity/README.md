@@ -1,5 +1,5 @@
 # X/Y identity & strata divergence calculation
-This pipline is used to calculate the X/Y identity and divergence calculation of each strata. Include two script.  
+This pipline is used to calculate the X/Y identity and divergence calculation of each strata. Include two scripts.  
 
 ## X/Y identity
 Calculate_XY_identity.sh    
