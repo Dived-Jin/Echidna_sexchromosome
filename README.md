@@ -15,8 +15,9 @@ This pipline (in [HiC_strength_compared](https://github.com/Dived-Jin/Echidna_se
 
 ## Ampliconic region annotation
 
-This pipeline (in [Ampliconic_Annotation](https://github.com/Dived-Jin/Echidna_sexchromosome/tree/main/Ampliconic_Annotation)) includes four steps:  
-1. Ampliconics region annontation by blastn and depth methods.  
-2. Orthologs clustering by MCL methods. 
-3. Ampliconic family classification based on ortholog. 
-4. Ampliconic genes visualizeation in circos plot.  
+This pipeline (in [Ampliconic_Annotation](https://github.com/Dived-Jin/Echidna_sexchromosome/tree/main/Ampliconic_Annotation)) includes five steps:  
+1. Repeat annotation with TRF, RepeatMasker & RepeatModeler
+2. Palindrome detection with lastz and palindrover  
+3. Tandem ampliconic region identified with blastn
+4. Collapsed ampliconic region identified with male sequencing depth
+5. Combine the ampliconic regions above. 
