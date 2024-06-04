@@ -18,8 +18,8 @@ and convert it to gff format.
 =head1 Usage
 
   --prefix <str>  set a prefix before repeat element ID
-  --verbose   output running progress information to screen
-  --help      output help information to screen
+  --verbose   output running progress information to screen  
+  --help      output help information to screen  
 
 =head1 Exmple
 
@@ -32,7 +32,7 @@ and convert it to gff format.
 use strict;
 use Getopt::Long;
 use FindBin qw($Bin $Script);
-use File::Basename qw(basename dirname);
+use File::Basename qw(basename dirname); 
 use Data::Dumper;
 use File::Path;  ## function " mkpath" and "rmtree" deal with directory
 
@@ -73,8 +73,8 @@ sub dat_to_gff3 {
 	my $file = shift;
 	my $pre_tag = shift;
 	my $output;
-
-	$pre_tag .= "_" if($pre_tag);
+	
+	$pre_tag .= "_" if($pre_tag); 
 	my $line_num = `wc -l $file`;
 	$line_num = $1 if($line_num =~ /^(\d+)/);
 	my $mark = create_marker($line_num);
@@ -88,7 +88,7 @@ sub dat_to_gff3 {
 		my $start = $t[0];
 		my $end = $t[1];
 		my $id = $pre_tag."TR".$mark;
-
+		
 		my $score = $t[7];
 		my $strand = "+";
 		$output .= "$chr\tTRF\tTandemRepeat\t$start\t$end\t$score\t$strand\t.\tID=$id;PeriodSize=$t[2];CopyNumber=$t[3];PercentMatches=$t[5];PercentIndels=$t[6];Consensus=$t[13];\n";
@@ -98,7 +98,7 @@ sub dat_to_gff3 {
 
 	open OUT,">$file.gff" || die "fail creat $file";
 	print OUT "##gff-version 3\n$output";
-	close OUT;
+	close OUT;	
 
 }
 
@@ -106,14 +106,14 @@ sub dat_to_gff3 {
 
 ##  SW   perc perc perc  query     position in query              matching       repeat       position in repeat
 ##score   div. del. ins.  sequence  begin    end          (left)   repeat         class/family begin   end   (left)  ID
-#245   35.2  2.5  0.6  chr1       1001400  1001556 (18753082) + TS2            SINE            80   239  (416)  12
+#245   35.2  2.5  0.6  chr1       1001400  1001556 (18753082) + TS2            SINE            80   239  (416)  12  
 ####################################################
 sub out_to_gff3 {
 	my $file = shift;
 	my $pre_tag = shift;
 	my $output;
 
-	$pre_tag .= "_" if($pre_tag);
+	$pre_tag .= "_" if($pre_tag); 
 	my $line_num = `wc -l $file`;
 	$line_num = $1 if($line_num =~ /^(\d+)/);
 	my $mark = create_marker($line_num);
@@ -145,7 +145,7 @@ sub out_to_gff3 {
 
 	open OUT,">$file.gff" || die "fail creat $file";
 	print OUT "##gff-version 3\n$output";
-	close OUT;
+	close OUT;	
 
 }
 
@@ -157,7 +157,7 @@ sub annot_to_gff3 {
 	my $pre_tag = shift;
 	my $output;
 
-	$pre_tag .= "_" if($pre_tag);
+	$pre_tag .= "_" if($pre_tag); 
 	my $line_num = `wc -l $file`;
 	$line_num = $1 if($line_num =~ /^(\d+)/);
 	my $mark = create_marker($line_num);
@@ -186,6 +186,6 @@ sub annot_to_gff3 {
 
 	open OUT,">$file.gff" || die "fail creat $file";
 	print OUT "##gff-version 3\n$output";
-	close OUT;
+	close OUT;	
 
 }
